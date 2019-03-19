@@ -1,6 +1,7 @@
 window.onload = function(){
     var memeForm = document.getElementById("formbox");
     var memecanvas = document.getElementById("meme");
+    memecanvas.style.position = "relative"
 
     memeForm.addEventListener("submit", function(event){
         event.preventDefault();
@@ -9,30 +10,32 @@ window.onload = function(){
         removeButton.innerText = "X";
 
         var newMeme = document.createElement("div");
-        newMeme = document.getElementById("imageURL").value;
+        var memePhoto = document.getElementById("imageURL").value;
         var img=new Image();
-        img.src=newMeme
-        img.style.position = "relative"
-        img.style.zIndex ="2"
+        img.src=memePhoto;
+        img.style.position = "relative";
+        img.style.zIndex ="2";
         memecanvas.appendChild(img);
         newMeme.appendChild(removeButton);
 
 
-        var topText = document.createElement("div");
-        topText.className = "div1";
-        topText.innerText = document.getElementById("textOnTop").value;
-        topText.style.backgroundColor = "teal"
-        topText.style.position = "absolute"
-        topText.style.top="10px"
-        topText.style.zIndex="3"
-        memecanvas.appendChild(topText);
+        var topDiv = document.createElement("div");
+        topDiv.className = "div1";
+        var topText=document.getElementById("textOnTop").value;
+        // topText.innerText = document.getElementById("textOnTop").value;
+        topDiv.style.backgroundColor = "teal";
+        topDiv.style.position = "absolute";
+        topDiv.style.top="10px";
+        // topDiv.style.textAlign = "center";
+        topDiv.style.zIndex="3";
+        memecanvas.appendChild(topDiv);
         newMeme.appendChild(removeButton);
 
-        var bottomText = document.createElement("div");
-        bottomText.className = "div2";
-        bottomText.innerText = document.getElementById("textOnBottom").value;
-        memecanvas.appendChild(bottomText);
-        newMeme.appendChild(removeButton);
+        // var bottomText = document.createElement("div");
+        // bottomText.className = "div2";
+        // bottomText.innerText = document.getElementById("textOnBottom").value;
+        // memecanvas.appendChild(bottomText);
+        // newMeme.appendChild(removeButton);
 
         memeForm.reset();
     })
