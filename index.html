@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    
+    <header>
+        <div id="heading">
+            <h1 class="title">Meme Generator</h1>
+            <p class="st">Fill out the form to start creating memes!</p>
+        </div>
+    </header>
+    <section>
+        <form action="#" type="submit" id="formbox">
+            <div class="form">
+                <label for="link">Image URL</label>
+                <input type="url" id="imageURL">
+            </div>
+            <div class="form">
+                <label for="text"> Text On Top</label>
+                <input type="text" id="textOnTop">
+            </div>
+            <div class="form">
+                <label for="text">Text On Bottom</label>
+                <input type="text" id="textOnBottom">
+            </div>
+            <div class="form">
+                <input type="submit" value="Create Meme" id="btn" class="button">
+                <!-- <script src="meme.js"></script> -->
+            </div>
+        </form>
+    </section>
+    <div id="meme">
+        <script src="meme2.js"></script>
+    </div>
+</body>
+</html>
+
+
+<!-- <div id="meme">
+    <p> 
+         <canvas id="memecanvas" width="600" height = "600"> 
+             <div id="textTop">
+                <script src=meme2.js>
+                    document.getElementById("textOnTop").value
+                    </script>
+            </div>
+            <div id="textBottom">
+            </div>
+
+         </canvas>
+     </p>
+
+    <script src="meme2.js"></script>
+</div> -->

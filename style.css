@@ -1,0 +1,65 @@
+body{
+    background-color: #FEFFDD; 
+    font-family: 'Libre Baskerville', serif;
+}
+
+header {
+    text-align: center;
+    background-color:#B5D492;
+    padding: 10px;
+}
+
+form{
+    background-color:#B5D492;
+    font-size: 15px; 
+    /* font-family: 'Libre Baskerville', serif; */
+    margin-top: -16px;
+    padding: 10px;
+    height: 100px;
+}
+
+label{
+    width: 140px;
+    height: 600px;
+}
+input, label, #btn{
+    font-family: 'Libre Baskerville', serif; 
+}
+
+input{
+    width: 400px;
+    color: grey;
+}
+
+#memecanvas{
+    width: 400px;
+}
+
+#meme{
+    position: absolute;
+}
+
+#textTop{
+    position: absolute;
+    top: 10px;
+}
+
+#textBottom{
+    position: absolute;
+    bottom: 10px;
+
+}
+
+
+#btn{
+    /* font-size: 40px; */
+    text-align: center;
+    width: 110px;
+    height: 30px;
+    background-color: #FFEB26;
+    border-style: solid;
+    border-width: thin;
+    border:pink;
+    color: black;
+}
+
