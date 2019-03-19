@@ -13,41 +13,43 @@ window.onload = function(){
         var memePhoto = document.getElementById("imageURL").value;
         var img=new Image();
         img.src=memePhoto;
-        img.style.position = "relative";
         img.style.zIndex ="2";
-        memecanvas.appendChild(img);
+        newMeme.appendChild(img);
         newMeme.appendChild(removeButton);
 
 
         var topDiv = document.createElement("div");
         topDiv.className = "div1";
-        var topText=document.getElementById("textOnTop").value;
-        // topText.innerText = document.getElementById("textOnTop").value;
+        var topText = document.getElementById("textOnTop").value;
+        topDiv.innerText = topText;
         topDiv.style.backgroundColor = "teal";
         topDiv.style.position = "absolute";
         topDiv.style.top="10px";
-        // topDiv.style.textAlign = "center";
         topDiv.style.zIndex="3";
-        memecanvas.appendChild(topDiv);
-        newMeme.appendChild(removeButton);
+        newMeme.appendChild(topDiv);
+        // memecanvas.appendChild(topDiv);
 
-        // var bottomText = document.createElement("div");
-        // bottomText.className = "div2";
-        // bottomText.innerText = document.getElementById("textOnBottom").value;
-        // memecanvas.appendChild(bottomText);
-        // newMeme.appendChild(removeButton);
+
+        var bottomDiv = document.createElement("div")
+        bottomDiv.className = "div2";
+        var bottomText = document.getElementById("textOnBottom").value;
+        bottomDiv.innerText = bottomText
+        bottomDiv.style.backgroundColor = "teal";
+        bottomDiv.style.position = "absolute";
+        bottomDiv.style.bottom = "30px";
+        topDiv.style.zIndex = "3";
+        newMeme.appendChild(bottomDiv);
+
+        memecanvas.appendChild(newMeme);
 
         memeForm.reset();
     })
 
-    //   memecanvas.addEventListener("click", function(event){
-    //     if (event.target.tagName.toLowerCase() === 'div') {
-    //         event.target.style.textDecoration = "line-through";
-    //     }
-    //     else if (event.target.tagName.toLowerCase() === 'button') {
-    //         event.target.parentNode.remove();
-    //     }
-    // })
+      memecanvas.addEventListener("click", function(event){
+        if (event.target.tagName.toLowerCase() === 'button') {
+            event.target.parentNode.remove();
+        }
+    })
 
     // memecanvas.addEventListener("mouseover", function(){
     //     var removeMeme = newMeme;

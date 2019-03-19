@@ -28,7 +28,8 @@ input, label, #btn{
 
 input{
     width: 400px;
-    color: grey;
+    /* color: grey; */
+    color: black;
 }
 
 #memecanvas{
