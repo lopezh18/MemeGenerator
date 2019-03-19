@@ -24,7 +24,7 @@ window.onload = function(){
         topText.style.backgroundColor = "teal"
         // topText.style.position = "absolute"
         // topText.style.top="10px"
-        topText.style.zIndex="4"
+        topText.style.zIndex="3"
         memecanvas.appendChild(topText);
         newMeme.appendChild(removeButton);
 
@@ -44,7 +44,7 @@ window.onload = function(){
     //     else if (event.target.tagName.toLowerCase() === 'button') {
     //         event.target.parentNode.remove();
     //     }
-    })
+    // })
 
     // memecanvas.addEventListener("mouseover", function(){
     //     var removeMeme = newMeme;
