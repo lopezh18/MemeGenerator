@@ -22,8 +22,8 @@ window.onload = function(){
         topText.className = "div1";
         topText.innerText = document.getElementById("textOnTop").value;
         topText.style.backgroundColor = "teal"
-        // topText.style.position = "absolute"
-        // topText.style.top="10px"
+        topText.style.position = "absolute"
+        topText.style.top="10px"
         topText.style.zIndex="3"
         memecanvas.appendChild(topText);
         newMeme.appendChild(removeButton);
