@@ -1,7 +1,7 @@
 window.onload = function(){
     var memeForm = document.getElementById("formbox");
     var memecanvas = document.getElementById("meme");
-    memecanvas.style.position = "relative"
+    // memecanvas.style.position = "relative"
 
     memeForm.addEventListener("submit", function(event){
         event.preventDefault();
@@ -11,6 +11,7 @@ window.onload = function(){
 
         var newMeme = document.createElement("div");
         var memePhoto = document.getElementById("imageURL").value;
+        newMeme.style.position = "relative"
         var img=new Image();
         img.src=memePhoto;
         img.style.zIndex ="2";
@@ -22,10 +23,15 @@ window.onload = function(){
         topDiv.className = "div1";
         var topText = document.getElementById("textOnTop").value;
         topDiv.innerText = topText;
-        topDiv.style.backgroundColor = "teal";
         topDiv.style.position = "absolute";
         topDiv.style.top="10px";
+        topDiv.style.left = "50%";
         topDiv.style.zIndex="3";
+        topDiv.style.fontSize = "70px";
+        topDiv.style.fontWeight = "bold";
+        topDiv.style.fontFamily = "'Bangers, cursive";
+        topDiv.style.color = "white";
+        topDiv.style.textShadow = "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000";
         newMeme.appendChild(topDiv);
         // memecanvas.appendChild(topDiv);
 
@@ -33,11 +39,17 @@ window.onload = function(){
         var bottomDiv = document.createElement("div")
         bottomDiv.className = "div2";
         var bottomText = document.getElementById("textOnBottom").value;
-        bottomDiv.innerText = bottomText
-        bottomDiv.style.backgroundColor = "teal";
+        bottomDiv.innerText = bottomText;
         bottomDiv.style.position = "absolute";
-        bottomDiv.style.bottom = "30px";
-        topDiv.style.zIndex = "3";
+        bottomDiv.style.bottom = "10px";
+        bottomDiv.style.right = "50%"
+        bottomDiv.style.zIndex = "3";
+        bottomDiv.style.fontSize = "70px";
+        bottomDiv.style.fontWeight = "bold";
+        bottomDiv.style.fontFamily = "'Bangers, cursive";
+        bottomDiv.style.color = "white";
+        bottomDiv.style.textShadow = "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000";
+
         newMeme.appendChild(bottomDiv);
 
         memecanvas.appendChild(newMeme);
@@ -50,10 +62,5 @@ window.onload = function(){
             event.target.parentNode.remove();
         }
     })
-
-    // memecanvas.addEventListener("mouseover", function(){
-    //     var removeMeme = newMeme;
-    //     memecanvas.innerText = event.target.className
-    // })
 
 }

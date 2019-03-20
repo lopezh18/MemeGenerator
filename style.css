@@ -9,13 +9,18 @@ header {
     padding: 10px;
 }
 
+
 form{
     background-color:#B5D492;
     font-size: 15px; 
     /* font-family: 'Libre Baskerville', serif; */
     margin-top: -16px;
     padding: 10px;
-    height: 100px;
+    height: 120px;
+}
+
+.xinfo{
+    line-height: 190%;
 }
 
 label{
