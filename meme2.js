@@ -15,6 +15,7 @@ window.onload = function(){
 
         var img=new Image();
         img.src=memePhoto;
+        img.style.width = "600px"
         img.style.zIndex ="2";
         newMeme.appendChild(img);
         newMeme.appendChild(removeButton);
@@ -26,9 +27,10 @@ window.onload = function(){
         topDiv.innerText = topText;
         topDiv.style.position = "absolute";
         topDiv.style.top="10px";
-        topDiv.style.left = "50%";
+        topDiv.style.width = "img.width";
+        topDiv.style.left = "150px";
         topDiv.style.zIndex="3";
-        topDiv.style.fontSize = "70px";
+        topDiv.style.fontSize = "50px";
         topDiv.style.fontWeight = "bold";
         topDiv.style.fontFamily = "'Bangers, cursive";
         topDiv.style.color = "white";
@@ -44,7 +46,7 @@ window.onload = function(){
         bottomDiv.style.bottom = "10px";
         bottomDiv.style.right = "50%"
         bottomDiv.style.zIndex = "3";
-        bottomDiv.style.fontSize = "70px";
+        bottomDiv.style.fontSize = "50px";
         bottomDiv.style.fontWeight = "bold";
         bottomDiv.style.fontFamily = "'Bangers, cursive";
         bottomDiv.style.color = "white";
